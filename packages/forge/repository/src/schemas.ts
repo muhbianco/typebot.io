@@ -23,6 +23,8 @@ import { qrCodeBlock } from "@typebot.io/qrcode-block";
 import { qrCodeBlockSchema } from "@typebot.io/qrcode-block/schemas";
 import { segmentBlock } from "@typebot.io/segment-block";
 import { segmentBlockSchema } from "@typebot.io/segment-block/schemas";
+import { smartflowBlock } from "@typebot.io/smartflow-block";
+import { smartflowBlockSchema } from "@typebot.io/smartflow-block/schemas";
 import { togetherAiBlock } from "@typebot.io/together-ai-block";
 import { togetherAiBlockSchema } from "@typebot.io/together-ai-block/schemas";
 import { zendeskBlock } from "@typebot.io/zendesk-block";
@@ -44,6 +46,7 @@ export const forgedBlockSchemas = {
   [segmentBlock.id]: segmentBlockSchema,
   [groqBlock.id]: groqBlockSchema,
   [zendeskBlock.id]: zendeskBlockSchema,
+  [smartflowBlock.id]: smartflowBlockSchema,
 } as const;
 
 export const forgedBlockSchema = z.discriminatedUnion("type", [
@@ -61,5 +64,6 @@ export const forgedBlockSchema = z.discriminatedUnion("type", [
   segmentBlockSchema,
   groqBlockSchema,
   zendeskBlockSchema,
+  smartflowBlockSchema,
 ]);
 export type ForgedBlock = z.infer<typeof forgedBlockSchema>;

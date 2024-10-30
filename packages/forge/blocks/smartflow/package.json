@@ -1,0 +1,5 @@
+{
+  "name": "@typebot.io/smartflow-block",
+  "dependencies": { "@typebot.io/forge": "workspace:*" },
+  "devDependencies": { "@typebot.io/tsconfig": "workspace:*" }
+}

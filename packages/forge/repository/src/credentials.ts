@@ -19,6 +19,8 @@ import { openAIBlock } from "@typebot.io/openai-block";
 import { openAICredentialsSchema } from "@typebot.io/openai-block/schemas";
 import { segmentBlock } from "@typebot.io/segment-block";
 import { segmentCredentialsSchema } from "@typebot.io/segment-block/schemas";
+import { smartflowBlock } from "@typebot.io/smartflow-block";
+import { smartflowCredentialsSchema } from "@typebot.io/smartflow-block/schemas";
 import { togetherAiBlock } from "@typebot.io/together-ai-block";
 import { togetherAiCredentialsSchema } from "@typebot.io/together-ai-block/schemas";
 import { zendeskBlock } from "@typebot.io/zendesk-block";
@@ -37,4 +39,5 @@ export const forgedCredentialsSchemas = {
   [segmentBlock.id]: segmentCredentialsSchema,
   [groqBlock.id]: groqCredentialsSchema,
   [zendeskBlock.id]: zendeskCredentialsSchema,
+  [smartflowBlock.id]: smartflowCredentialsSchema,
 };
