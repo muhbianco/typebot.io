@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "172.17.0.1 mariadb" >> /etc/hosts
 
 cd apps/builder;
 node  -e "const { configureRuntimeEnv } = require('next-runtime-env/build/configure'); configureRuntimeEnv();"
